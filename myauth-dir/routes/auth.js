@@ -44,7 +44,7 @@ router.post('/login' , async (req , res) => {
         const Match = await bcrypt.compare(password,user.password);
         if (!Match) {
             return res.status(400).json({msg : 'Invalid Crediantial'});
-        }
+        } 
 
         const payload={
             user: {
